@@ -18,8 +18,6 @@ import { StatusFormService } from './shared/status-form.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 import { ToastrModule } from 'ngx-toastr';
-import { LoginUserComponent } from './login/login-user/login-user.component';
-import { RegisterUserComponent } from './login/register-user/register-user.component';
 
 @NgModule({
   declarations: [
@@ -27,8 +25,7 @@ import { RegisterUserComponent } from './login/register-user/register-user.compo
     routingComponents,
     StatusFormComponent,
     StatusListComponent,
-    LoginUserComponent,
-    RegisterUserComponent
+
   ],
   imports: [
     BrowserModule,
