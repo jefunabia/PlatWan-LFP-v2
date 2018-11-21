@@ -18,6 +18,8 @@ import { StatusFormService } from './shared/status-form.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 import { ToastrModule } from 'ngx-toastr';
+import { LoginServiceService } from './shared/login-service.service';
+import { RegisterServiceService } from './shared/register-service.service';
 
 @NgModule({
   declarations: [
@@ -36,7 +38,7 @@ import { ToastrModule } from 'ngx-toastr';
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [StatusFormService],
+  providers: [StatusFormService, LoginServiceService, RegisterServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
