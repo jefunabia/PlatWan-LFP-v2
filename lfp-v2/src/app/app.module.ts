@@ -29,7 +29,6 @@ import { LoginPageComponent } from './login/login-page/login-page.component';
     StatusFormComponent,
     StatusListComponent,
     LoginPageComponent
-
   ],
   imports: [
     BrowserModule,
