@@ -1,2 +1,2 @@
 # PlatWan-LFP-v2
-![stuff](https://imgur.com/a/bfhBNfA)
+![stuff](https://imgur.com/rwZIBjm)
