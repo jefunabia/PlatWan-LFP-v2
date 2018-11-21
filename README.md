@@ -1,2 +1,2 @@
 # PlatWan-LFP-v2
-![stuff](https://imgur.com/rwZIBjm)
+<blockquote class="imgur-embed-pub" lang="en" data-id="rwZIBjm"><a href="//imgur.com/rwZIBjm"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
