@@ -1,0 +1,24 @@
+body {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+}
+
+.form-group{
+    padding-left: 5%;
+}
+
+h1 {
+    color: rgb(91, 243, 111);
+    padding-left: 3%;
+    padding-top: 4%;
+}
+
+.btn-group-toggle {
+    padding-left: 5%;
+    padding-right: 5%;
+    padding-top: 3%;
+}
+.btn-primary {
+    width: 150px;
+}

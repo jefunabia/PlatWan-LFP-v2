@@ -3,6 +3,7 @@ import * as $ from 'jquery';
 import { RegisterServiceService } from '../shared/register-service.service';
 import { NgForm } from '@angular/forms';
 import { AngularFirestore } from '@angular/fire/firestore';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +13,8 @@ import { AngularFirestore } from '@angular/fire/firestore';
 export class LoginComponent implements OnInit {
 
   constructor(private service : RegisterServiceService,
-    private firestore:AngularFirestore) { }
+    private firestore:AngularFirestore,
+    private toastr : ToastrService) { }
 
   ngOnInit() {
     $('.message a').click(function () {
@@ -37,7 +39,8 @@ export class LoginComponent implements OnInit {
 
   onSubmit(form:NgForm){
     let data = form.value;
-    this.firestore.collection('users').add(data);
+    this.firestore.collection('registeredUsers').add(data);
     this.resetForm(form);
+    this.toastr.success('Please proceed to "Already have an account?"','Registration Success!');
   }
 }

@@ -17,19 +17,19 @@ export class LoginPageComponent implements OnInit {
     this.resetForm();
   }
 
-  resetForm(form? : NgForm){
-    if(form!=null)
-    form.resetForm();
+  resetForm(loginForm? : NgForm){
+    if (loginForm != null)
+    loginForm.resetForm();
     this.service.loginFormData = {
       id : null,
       username : '',
       password : ''
     }
   }
-  onSubmit(form:NgForm){
-    let data = form.value;
-    this.firestore.collection('users').add(data);
-    this.resetForm(form);
+  onSubmit(loginForm:NgForm){
+    let data = loginForm.value;
+    this.firestore.collection('loginUser').add(data);
+    
   }
 
 }

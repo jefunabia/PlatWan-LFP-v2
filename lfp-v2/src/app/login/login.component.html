@@ -16,7 +16,7 @@
                 <input type="password" placeholder="Enter your password" name="password" #password="ngModel" [(ngModel)]="service.formData.password">
                 <label>Confirm Password:</label>
                 <input type="password" placeholder="Confirm your password" name="confirmPassword" #confirmPassword="ngModel" [(ngModel)]="service.formData.confirmPassword">
-                <button type="submit" class="btn btn-success" routerLink="/home">Create Account</button>
+                <button type="submit" class="btn btn-success">Create Account</button>
                 <p class="message"><a routerLink="#">Already have an account?</a></p>
             </form>
             <app-login-page></app-login-page>
