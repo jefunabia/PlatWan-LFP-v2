@@ -1,0 +1,8 @@
+<form #userForm="ngForm" routerLink="#" class="login form">
+  <!--{{ userForm.value | json }}-->
+  <legend class="header">Welcome Back!</legend>
+  <input type="text" placeholder="Username" name="username" ngModel required>
+  <input type="password" placeholder="Password" name="password" ngModel required>
+  <button type="button" class="btn btn-success" routerLink="/home">Login</button>
+  <p class="message"><a routerLink="#">Don't have an account? Register here!</a></p>
+</form>

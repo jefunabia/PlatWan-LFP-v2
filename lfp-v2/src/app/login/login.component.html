@@ -3,30 +3,23 @@
     <div class="loginPage">
         <div class="form">
             <form #registerForm="ngForm" routerLink="#" class="register-form" novalidate>
-                    <!--{{ registerForm.value | json }}-->
-                    <!--{{ registerForm.form.valid }}-->
-                <legend class="header">Register Account</legend>
-                <label>Email address:</label>   
-                <input type="text" placeholder="Enter a valid email address" name="email" ngModel>
-                <label>Username:</label>   
-                <input type="text" placeholder="Enter your desired username" name="username" ngModel>
-                <label>Display Name:</label>   
-                <input type="text" placeholder="Enter your desired display name" name="displayName" ngModel>
-                <label>Password:</label>   
-                <input type="password" placeholder="Enter your password" name="password" ngModel>
-                <label>Confirm Password:</label>   
-                <input type="password" placeholder="Confirm your password" name="confirmPassword" ngModel>
-                <button type="button" class="btn btn-success" routerLink="/home">Create Account</button>
-                <p class="message"><a routerLink="#">Already have an account?</a></p>
-            </form>
-            <form #userForm="ngForm" routerLink="#" class="login form">
-                <!--{{ userForm.value | json }}-->
-                <legend class="header">Welcome Back!</legend>
-                <input type="text" placeholder="Username" name="username" ngModel required>
-                <input type="password" placeholder="Password" name="password" ngModel required>
-                <button type="button" class="btn btn-success" routerLink="/home">Login</button>
-                <p class="message"><a routerLink="#">Don't have an account? Register here!</a></p>
-            </form>
+                <!--{{ registerForm.value | json }}-->
+                <!--{{ registerForm.form.valid }}-->
+              <legend class="header">Register Account</legend>
+              <label>Email address:</label>   
+              <input type="text" placeholder="Enter a valid email address" name="email" ngModel>
+              <label>Username:</label>   
+              <input type="text" placeholder="Enter your desired username" name="username" ngModel>
+              <label>Display Name:</label>   
+              <input type="text" placeholder="Enter your desired display name" name="displayName" ngModel>
+              <label>Password:</label>   
+              <input type="password" placeholder="Enter your password" name="password" ngModel>
+              <label>Confirm Password:</label>   
+              <input type="password" placeholder="Confirm your password" name="confirmPassword" ngModel>
+              <button type="button" class="btn btn-success" routerLink="/home">Create Account</button>
+              <p class="message"><a routerLink="#">Already have an account?</a></p>
+              </form>
+            <app-login-page></app-login-page>
         </div>
     </div>
 </body>

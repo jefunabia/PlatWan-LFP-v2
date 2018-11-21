@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
+import { LoginServiceService } from '../shared/login-service.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +9,7 @@ import * as $ from 'jquery';
 })
 export class LoginComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service : LoginServiceService) { }
 
   ngOnInit() {
     $('.message a').click(function () {

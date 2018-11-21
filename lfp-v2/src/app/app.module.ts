@@ -20,6 +20,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { LoginServiceService } from './shared/login-service.service';
 import { RegisterServiceService } from './shared/register-service.service';
+import { LoginPageComponent } from './login/login-page/login-page.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { RegisterServiceService } from './shared/register-service.service';
     routingComponents,
     StatusFormComponent,
     StatusListComponent,
+    LoginPageComponent
 
   ],
   imports: [
