@@ -18,7 +18,18 @@ h1 {
     padding-left: 5%;
     padding-right: 5%;
     padding-top: 3%;
+    
 }
 .btn-primary {
     width: 150px;
+    
+}
+
+.btn-block {
+    font-size: 14px;
+}
+
+.form-row-2{
+    padding-top: 20%;
+    padding-left: 5%;
 }
