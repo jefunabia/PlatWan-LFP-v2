@@ -33,4 +33,6 @@ export class StatusFormComponent implements OnInit {
       this.resetForm(form);
       this.toastr.success('Status posted!','LFP>')
     }
+
+    
 }
