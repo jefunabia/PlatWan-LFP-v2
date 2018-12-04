@@ -1,0 +1,107 @@
+<title>LFP | Looking For Party</title>
+<h1 class="display-4">LFP></h1>
+<form #form="ngForm" autocomplete="off" (submit)="onSubmit(form)">
+
+  <div class="form-group">
+    <label>{{userModel.displayName}}</label>
+    <input name="status" #status="ngModel" [(ngModel)]="service.formData.status" class="form-control" placeholder="Enter your message here...">
+  </div>
+
+  <div class="form-group">
+    <label>Select one (1) tag per category below:</label>
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-primary active">
+        <input type="radio" name="gameTag" id="dota2" autocomplete="off" checked=""> #DOTA2
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="gameTag" id="lol" autocomplete="off"> #LOL
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="gameTag" id="csgo" autocomplete="off"> #CS:GO
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-primary active">
+        <input type="radio" name="languageTag" id="english" autocomplete="off" checked=""> #ENG
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="languageTag" id="filipino" autocomplete="off"> #FIL
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="languageTag" id="cebuano" autocomplete="off"> #CEB
+      </label>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <div class="btn-group btn-group-toggle" data-toggle="buttons">
+      <label class="btn btn-primary active">
+        <input type="radio" name="countryTag" id="ph" autocomplete="off" checked=""> #PH
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="countryTag" id="sea" autocomplete="off"> #SEA
+      </label>
+      <label class="btn btn-primary">
+        <input type="radio" name="countryTag" id="na" autocomplete="off"> #NA
+      </label>
+    </div>
+  </div>
+
+<div class="form-row">
+      <div class="form-group col-md-6">
+        <button type="submit" class="btn btn-block btn-success">LFP</button>
+      </div>
+
+      <div class="form-group col-md-6">
+        <button type="button" class="btn btn-block btn-danger">Cancel</button>
+      </div>  
+</div>
+
+
+  <div class="form-row">
+      <div class="form-group col-md-4">
+           <label for="games"> Tags: Games </label>
+          <select id="games" name="games" [(ngModel)]="games" class="form-control">
+            <option value="1">#DOTA2</option>
+            <option value="2">#LOL</option>
+            <option value="3">#CS</option>
+          </select>
+        </div>
+
+      <div class="form-group col-md-4">
+            <label for="language"> Tags: Language </label>
+           <select id="language" name="language" [(ngModel)]="language" class="form-control">
+             <option value="1">#CEB</option>
+             <option value="2">#FIl</option>
+             <option value="3">#ENG</option>
+           </select>
+        </div>
+
+      <div class="form-group col-md-4">
+          <label for="lang"> Tags: Country </label>
+         <select id="country" name="country" [(ngModel)]="country" class="form-control">
+           <option value="1">#PH</option>
+           <option value="2">#SEA</option>
+           <option value="3">#NA</option>
+          </select>
+       </div>
+
+        <div class="form-group col-md-6">
+          <button type="button" class="btn btn-block btn-success">Search</button>
+        </div>
+
+        <div class="form-group col-md-6">
+            <button type="button" class="btn btn-block btn-success">Match</button>
+          </div>
+
+  </div>
+
+  <div class="form-row-3">
+    <button type="button" (click)="signOut()" class="btn btn-block btn-primary">Sign Out</button>
+   </div>
+
+  
+</form>

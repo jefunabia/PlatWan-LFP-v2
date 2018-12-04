@@ -9,18 +9,22 @@ import { AppComponent } from './app.component';
 
 import { environment } from 'src/environments/environment';
 
-
 import { FormsModule } from '@angular/forms';
-import { StatusFormComponent } from './home/status-form/status-form.component';
-import { StatusListComponent } from './home/status-list/status-list.component';
-import { StatusFormService } from './shared/status-form.service';
+import { StatusFormComponent } from '@components/status-form/status-form.component';
+import { StatusListComponent } from '@components/status-list/status-list.component';
+import { StatusFormService } from '@services/status-form.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
 import { ToastrModule } from 'ngx-toastr';
-import { LoginServiceService } from './shared/login-service.service';
-import { RegisterServiceService } from './shared/register-service.service';
-import { LoginPageComponent } from './login/login-page/login-page.component';
+import { RegisterService } from '@services/register.service';
+import { LoginFormComponent } from '@components/login-form/login-form.component';
+import { RegisterFormComponent } from '@components/register-form/register-form.component';
+import { PasswordSecurityService } from '@services/password-security.service';
+import { LoginService } from '@services/login.service';
+import { AuthGuardService } from './services/auth/auth-guard.service';
+import { UserService } from './services/user.service';
+import { TokenService } from './services/token.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +32,8 @@ import { LoginPageComponent } from './login/login-page/login-page.component';
     routingComponents,
     StatusFormComponent,
     StatusListComponent,
-    LoginPageComponent
+    LoginFormComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +44,7 @@ import { LoginPageComponent } from './login/login-page/login-page.component';
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [StatusFormService, LoginServiceService, RegisterServiceService],
+  providers: [StatusFormService, RegisterService, PasswordSecurityService, LoginService, AuthGuardService, UserService, TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
