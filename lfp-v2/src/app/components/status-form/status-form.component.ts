@@ -52,5 +52,5 @@ export class StatusFormComponent implements OnInit {
     this.toastr.success('Signed out successfully!','LFP>')
   }
 
-    
+
 }
