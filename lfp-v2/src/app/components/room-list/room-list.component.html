@@ -8,15 +8,32 @@ These people might need your help!
       <td>{{room.displayName}}</td>
       <td>{{room.userId}}</td>
       <td>{{room.description}}</td>
-      <td>{{room.tags}}</td>
       <ng-container *ngIf="room.tags[0] == 100">
-        <button class="btn btn-warning">Dota2</button>
+        <button class="btn room-tag btn-success">Dota2</button>
+      </ng-container>
+      <ng-container *ngIf="room.tags[0] == 101">
+        <button class="btn room-tag btn-success">LOL</button>
+      </ng-container>
+      <ng-container *ngIf="room.tags[0] == 102">
+        <button class="btn room-tag btn-success">CSGO</button>
+      </ng-container>
+      <ng-container *ngIf="room.tags[1] == 200">
+        <button class="btn room-tag btn-info">ENG</button>
       </ng-container>
       <ng-container *ngIf="room.tags[1] == 201">
-        <button class="btn btn-warning">FIL</button>
+        <button class="btn room-tag btn-info">FIL</button>
+      </ng-container>
+      <ng-container *ngIf="room.tags[1] == 202">
+        <button class="btn room-tag btn-info">CEB</button>
+      </ng-container>
+      <ng-container *ngIf="room.tags[2] == 300">
+        <button class="btn room-tag btn-warning">PH</button>
+      </ng-container>
+      <ng-container *ngIf="room.tags[2] == 301">
+        <button class="btn room-tag btn-warning">SEA</button>
       </ng-container>
       <ng-container *ngIf="room.tags[2] == 302">
-        <button class="btn btn-warning">NA</button>
+        <button class="btn room-tag btn-warning">NA</button>
       </ng-container>
       <td>{{room.dateCreated.seconds * 1000 | date:'hh:mm:ss a on MM-dd-yyyy' }}</td>
       <td> <button class="btn"> JOIN </button> </td>
