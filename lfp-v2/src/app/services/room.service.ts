@@ -12,7 +12,7 @@ export class RoomService {
 
   hostRoom(roomModel: RoomModel):Promise<void> {
     roomModel.id = this.firestore.createId();
-    return this.firestore.collection("rooms").doc(roomModel.userId.toString()).set(roomModel);
+    return this.firestore.collection("rooms").doc(roomModel.id.toString()).set(roomModel);
   }
   
   getRooms(){
