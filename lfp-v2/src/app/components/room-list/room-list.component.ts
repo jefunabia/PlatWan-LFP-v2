@@ -18,7 +18,7 @@ export class RoomListComponent implements OnInit {
       collectionSnapshot => {
         this.roomList = [];
         for(let i = 0 ; i < collectionSnapshot.length; i++){
-          this.roomList.push(collectionSnapshot[0].payload.doc.data());
+          this.roomList.push(collectionSnapshot[i].payload.doc.data());
         }
       }
     )
