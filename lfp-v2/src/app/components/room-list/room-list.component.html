@@ -1,0 +1,25 @@
+These people might need your help!
+<table class="table table-hover">
+  <thead>
+  </thead>
+  <tbody>
+    <tr *ngFor="let room of roomList">
+      <td>{{room.id}}</td>
+      <td>{{room.displayName}}</td>
+      <td>{{room.userId}}</td>
+      <td>{{room.description}}</td>
+      <td>{{room.tags}}</td>
+      <ng-container *ngIf="room.tags[0] == 100">
+        <button class="btn btn-warning">Dota2</button>
+      </ng-container>
+      <ng-container *ngIf="room.tags[1] == 201">
+        <button class="btn btn-warning">FIL</button>
+      </ng-container>
+      <ng-container *ngIf="room.tags[2] == 302">
+        <button class="btn btn-warning">NA</button>
+      </ng-container>
+      <td>{{room.dateCreated.seconds * 1000 | date:'hh:mm:ss a on MM-dd-yyyy' }}</td>
+      <td> <button class="btn"> JOIN </button> </td>
+    </tr>
+  </tbody>
+</table>

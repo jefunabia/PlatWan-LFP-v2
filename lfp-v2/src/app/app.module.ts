@@ -10,9 +10,9 @@ import { AppComponent } from './app.component';
 import { environment } from 'src/environments/environment';
 
 import { FormsModule } from '@angular/forms';
-import { StatusFormComponent } from '@components/status-form/status-form.component';
-import { StatusListComponent } from '@components/status-list/status-list.component';
-import { StatusFormService } from '@services/status-form.service';
+import { RoomFormComponent } from '@components/room-form/room-form.component';
+import { RoomListComponent } from '@components/room-list/room-list.component';
+import { RoomService } from '@app/services/room.service';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
  
@@ -30,8 +30,8 @@ import { TokenService } from './services/token.service';
   declarations: [
     AppComponent,
     routingComponents,
-    StatusFormComponent,
-    StatusListComponent,
+    RoomFormComponent,
+    RoomListComponent,
     LoginFormComponent,
     RegisterFormComponent
   ],
@@ -44,7 +44,7 @@ import { TokenService } from './services/token.service';
     BrowserAnimationsModule,
     ToastrModule.forRoot()
   ],
-  providers: [StatusFormService, RegisterService, PasswordSecurityService, LoginService, AuthGuardService, UserService, TokenService],
+  providers: [RoomService, RegisterService, PasswordSecurityService, LoginService, AuthGuardService, UserService, TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

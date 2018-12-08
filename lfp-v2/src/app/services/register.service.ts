@@ -12,18 +12,19 @@ export class RegisterService {
   constructor(private firestore:AngularFirestore, 
     private passwordSecurityService: PasswordSecurityService) { }
 
-  registerUser(user:UserModel):Promise<DocumentReference>{
-    return new Promise<DocumentReference> ( 
+  registerUser(user:UserModel):Promise<void>{
+    return new Promise<void> ( 
       (resolve,reject) => { 
         this.verifyInputs(user).then(
           errorCode => {
             //If there are no errors, return a task to user to database
             if(errorCode == RegisterErrorCode.NoError){
-              var id = this.firestore.createId;
+              var id = this.firestore.createId();
+              user.id = id;
               var hashedPassword = this.passwordSecurityService.encrypt(user.password);
               user.password = hashedPassword;
               user.confirmPassword = hashedPassword;
-              resolve(this.firestore.collection("users").add(user));
+              resolve(this.firestore.collection("users").doc(id).set(user));
             } 
             else {
               //if there are errors, reject the request to put user in the database

@@ -18,7 +18,7 @@ export class TokenService {
     userToken.id = this.firestore.createId();
     userToken.status = UserStatus.Offline;
     userToken.userId = user.id;
-    localStorage.setItem("userToken", JSON.stringify(userToken));
+    this.addUserTokenToLocalStorage(userToken);
     return this.firestore.collection("userTokens").doc(userToken.id.toString()).set(userToken);
   }
 
@@ -26,6 +26,9 @@ export class TokenService {
     localStorage.removeItem("userToken");
   }
 
+  addUserTokenToLocalStorage(userToken:UserTokenModel){
+    localStorage.setItem("userToken", JSON.stringify(userToken));
+  }
   
   getCurrentUserToken():UserTokenModel{
     return JSON.parse(localStorage.getItem("userToken")) as UserTokenModel;
