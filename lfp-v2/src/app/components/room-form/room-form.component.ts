@@ -8,6 +8,7 @@ import { RoomModel } from '@app/models/room-model';
 import * as $ from 'jquery';
 import { firestore } from 'firebase/app';
 import { RoomTag } from '@app/enums/room-tag.enum';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -23,6 +24,7 @@ export class RoomFormComponent implements OnInit {
   constructor(private service : RoomService,
     private toastr : ToastrService,
     private loginService: LoginService,
+    private router: Router,
     private roomService: RoomService,
     private userService: UserService) { }
 
@@ -70,6 +72,10 @@ export class RoomFormComponent implements OnInit {
   signOut(){
     this.loginService.logoutUser();
     this.toastr.success('Signed out successfully!','LFP>')
+  }
+
+  showProfile(){
+    this.router.navigate(['/my-profile']);
   }
 
 

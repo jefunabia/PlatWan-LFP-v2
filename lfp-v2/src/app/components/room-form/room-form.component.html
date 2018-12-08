@@ -1,9 +1,14 @@
 <title>LFP | Looking For Party</title>
+
 <h1 class="display-4">LFP></h1>
+
+<div class="pl-4">
+  <label>Currently logged in as: {{userModel.displayName}}</label> <button (click)="showProfile()">My Profile</button>
+</div>
+
 <form #form="ngForm" autocomplete="off" (submit)="onSubmit()" >
 
   <div class="form-group">
-    <label>Currently logged in as: {{userModel.displayName}}</label>
     <input name="description" #status="ngModel" [(ngModel)]="roomModel.description" class="form-control" placeholder="Enter room description here...">
   </div>
 

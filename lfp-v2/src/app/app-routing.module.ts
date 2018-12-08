@@ -4,11 +4,13 @@ import { LoginComponent } from '@components/login/login.component';
 import { HomeComponent } from '@components/home/home.component';
 import { ChatLobbyComponent } from '@components/chat-lobby/chat-lobby.component';
 import { AuthGuardService } from '@services/auth/auth-guard.service';
+import { ProfileComponent } from './components/profile/profile.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent, canActivate: [AuthGuardService] },
+  { path: 'my-profile', component: ProfileComponent, canActivate: [AuthGuardService] },
   { path: 'chat-lobby', component: ChatLobbyComponent, canActivate: [AuthGuardService] }
 ];
 

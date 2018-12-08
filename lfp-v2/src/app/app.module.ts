@@ -25,6 +25,7 @@ import { LoginService } from '@services/login.service';
 import { AuthGuardService } from './services/auth/auth-guard.service';
 import { UserService } from './services/user.service';
 import { TokenService } from './services/token.service';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { TokenService } from './services/token.service';
     RoomFormComponent,
     RoomListComponent,
     LoginFormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
