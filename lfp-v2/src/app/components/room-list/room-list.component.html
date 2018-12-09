@@ -1,42 +1,48 @@
-These people might need your help!
+
+  <h3>These people might need your help!</h3>
+  <hr class="my-4">
 <table class="table table-hover">
   <thead>
   </thead>
   <tbody>
     <tr *ngFor="let room of roomList">
+      <!--
       <td>{{room.id}}</td>
-      <td>{{room.displayName}}</td>
+      -->
+      <td>{{room.displayName}}:</td>
+      <!--
       <td>{{room.userId}}</td>
+      -->
       <td>{{room.description}}</td>
       <ng-container *ngIf="room.tags[0] == 100">
-        <button class="btn room-tag btn-success">Dota2</button>
+        <span class="badge badge-pill badge-info">#DOTA2</span>
       </ng-container>
       <ng-container *ngIf="room.tags[0] == 101">
-        <button class="btn room-tag btn-success">LOL</button>
+        <span class="badge badge-pill badge-info">#LOL</span>
       </ng-container>
       <ng-container *ngIf="room.tags[0] == 102">
-        <button class="btn room-tag btn-success">CSGO</button>
+        <span class="badge badge-pill badge-info">#CSGO</span>
       </ng-container>
       <ng-container *ngIf="room.tags[1] == 200">
-        <button class="btn room-tag btn-info">ENG</button>
+        <span class="badge badge-pill badge-success">#ENG</span>
       </ng-container>
       <ng-container *ngIf="room.tags[1] == 201">
-        <button class="btn room-tag btn-info">FIL</button>
+        <span class="badge badge-pill badge-success">#FIL</span>
       </ng-container>
       <ng-container *ngIf="room.tags[1] == 202">
-        <button class="btn room-tag btn-info">CEB</button>
+        <span class="badge badge-pill badge-success">#CEB</span>
       </ng-container>
       <ng-container *ngIf="room.tags[2] == 300">
-        <button class="btn room-tag btn-warning">PH</button>
+        <span class="badge badge-pill badge-danger">#PH</span>
       </ng-container>
       <ng-container *ngIf="room.tags[2] == 301">
-        <button class="btn room-tag btn-warning">SEA</button>
+        <span class="badge badge-pill badge-danger">#SEA</span>
       </ng-container>
       <ng-container *ngIf="room.tags[2] == 302">
-        <button class="btn room-tag btn-warning">NA</button>
+        <span class="badge badge-pill badge-danger">#NA</span>
       </ng-container>
       <td>{{room.dateCreated.seconds * 1000 | date:'hh:mm:ss a on MM-dd-yyyy' }}</td>
-      <td> <button class="btn"> JOIN </button> </td>
+      <td> <button type="button" class="btn btn-outline-success"> JOIN </button> </td>
     </tr>
   </tbody>
 </table>
