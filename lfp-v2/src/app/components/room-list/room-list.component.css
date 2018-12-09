@@ -8,3 +8,8 @@ h3 {
     color: rgb(128, 245, 134);
     padding-top: 5%;
 }
+
+
+.badge {
+    width: 90px;
+}
