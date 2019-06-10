@@ -3,7 +3,7 @@
 
 **LFP>** *(Looking for Party)* is a website created by using HTML, CSS and AngularJS.
 
-### LFP> aims to connect gamers worldwide by providing them a platform that is easy-to-use, and convenient to everyone!
+**LFP>** aims to connect gamers worldwide by providing them a platform that is easy-to-use, and convenient to everyone!
 
 ## Having a Hard Time Using your Game's Recruitment System?
 Worry no more, as we provide you with built-in tags so that everyone can easily know what game you want to team up with!
