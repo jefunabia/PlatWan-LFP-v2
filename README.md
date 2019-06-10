@@ -1,5 +1,6 @@
 # LFP>
 ![LFP](https://i.imgur.com/rwZIBjm.jpg)
+## A CMSC 128 (Software Engineering) Project
 
 **LFP>** *(Looking for Party)* is a website created by using HTML, CSS and AngularJS.
 
